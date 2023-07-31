@@ -22,7 +22,7 @@
      <div class="row">
         <div class="input-group mb-3">
             <span class="input-group-text" id="inputGroup-sizing-default">Current Year to date from latest pay stub</span>
-            <input id="" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+            <input value="25280.15" id="ytd" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
           </div>
 
      </div>
@@ -30,7 +30,7 @@
      <div class="row">
         <div class="input-group mb-3">
             <span class="input-group-text" id="inputGroup-sizing-default">Pay Frequency</span>
-            <input id="" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+            <input id="payFrequency" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
           </div>
 
      </div>
@@ -38,7 +38,7 @@
      <div class="row">
         <div class="input-group mb-3">
             <span class="input-group-text" id="inputGroup-sizing-default">Date of last pay period</span>
-            <input id="" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+            <input id="lastDate" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
           </div>
 
      </div>
@@ -46,8 +46,23 @@
      <div class="row">
         <div class="input-group mb-3">
             <span class="input-group-text" id="inputGroup-sizing-default">pay periods that have elapsed</span>
-            <input id="" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+            <input value="4" id="elapsedPayPeriods" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
           </div>
+
+     </div>
+
+     <div class="row">
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">Number of months customer gets paid</span>
+            <input value="10" id="numOfMonths" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+          </div>
+
+     </div>
+
+     <div class="row">
+        <div>
+            <button id="button" type="button" class="btn btn-success">Calculate</button>
+        </div>
 
      </div>
 
