@@ -22,31 +22,42 @@
      <div class="row">
         <div class="input-group mb-3">
             <span class="input-group-text" id="inputGroup-sizing-default">Current Year to date from latest pay stub</span>
-            <input value="25280.15" id="ytd" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+            <input id="ytd" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
           </div>
 
      </div>
 
-     <div class="row">
-        <div class="input-group mb-3">
-            <span class="input-group-text" id="inputGroup-sizing-default">Pay Frequency</span>
-            <input id="payFrequency" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-          </div>
+     <div class="row" id="PFrow">
+        <div class="row">
+            <select class="form-select" id="payFrequency" aria-label="Default select example">
+                <option selected>Choose Option</option>
+                <option value="1">Weekly</option>
+                <option value="2">Bi-Weekly</option>
+                <option value="3">Semi Monthly</option>
+                <option value="4">Monthly</option>
+                <option value="5">Annualy</option>
+              </select>
+    
+         </div>
 
      </div>
 
      <div class="row">
-        <div class="input-group mb-3">
-            <span class="input-group-text" id="inputGroup-sizing-default">Date of last pay period</span>
-            <input id="lastDate" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-          </div>
+        
+        <div class="row">
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Date of last pay period</span>
+                <input id="lastDate" type="date" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+            </div>
+        </div>
+        
 
      </div>
     
      <div class="row">
         <div class="input-group mb-3">
             <span class="input-group-text" id="inputGroup-sizing-default">pay periods that have elapsed</span>
-            <input value="4" id="elapsedPayPeriods" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+            <input id="elapsedPayPeriods" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
           </div>
 
      </div>
@@ -54,7 +65,7 @@
      <div class="row">
         <div class="input-group mb-3">
             <span class="input-group-text" id="inputGroup-sizing-default">Number of months customer gets paid</span>
-            <input value="10" id="numOfMonths" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+            <input id="numOfMonths" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
           </div>
 
      </div>
