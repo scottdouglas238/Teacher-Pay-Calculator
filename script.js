@@ -9,9 +9,11 @@ let ytdarry = []
 let PFarray = []
 let differenceInDaysArray = []
 let numOfMonthsArray = []
+let finalCalculation = []
 
 button.addEventListener("click", function(e){
     e.preventDefault()
+    teacherPayTotal.innerHTML = ''
 
     // Setting the globally scoped arrays to clear the fields
     let ytdarry = []
@@ -39,10 +41,31 @@ button.addEventListener("click", function(e){
     
     // Calculate the pay periods that have elasped
     const payPeriodElapsed = Math.floor(differenceInDaysArray/PFarray)
+    const averageTotal = ytdarry/payPeriodElapsed
+    const PFNum = parseFloat(PFarray)
+    const numOfMonthsNum = parseFloat(numOfMonthsArray)
     
-    console.log(payPeriodElapsed)
+    if(PFNum === 14 && numOfMonthsNum === 9){
+        finalCalculation.push(averageTotal * 19.5) 
+    }
+    else if(PFNum === 14 && numOfMonthsNum === 10){
+        finalCalculation.push(averageTotal * 21.6)
+    }
+    else if(PFNum === 14 && numOfMonthsNum === 11){
+        finalCalculation.push(averageTotal * 23.8)
+    }
+    else if(PFNum === 15 && numOfMonthsNum === 9){
+        finalCalculation.push(averageTotal * 18)
+    }
+    else if(PFNum === 15 && numOfMonthsNum === 10){
+        finalCalculation.push(averageTotal * 20)
+    }
+    else if(PFNum === 15 && numOfMonthsNum === 11){
+        finalCalculation.push(averageTotal * 22)
+    }
 
-
+    const fc = parseFloat(finalCalculation)
+    teacherPayTotal.append(fc.toFixed(2))
  
     
     
@@ -62,4 +85,5 @@ numOfMonths.addEventListener("change", function(e){
     numOfMonthsArray = []
     const NMA = e.target.value
     numOfMonthsArray.push(NMA)
+
  })
