@@ -1,3 +1,13 @@
+#ytdRow{
+padding-left: 3;
+
+}
+
 #PFrow{
     padding-bottom: 15px;
+    padding-left: 12px;
+}
+
+#NumMonths{
+    padding-bottom: 1px;
 }

@@ -13,9 +13,11 @@ let finalCalculation = []
 
 button.addEventListener("click", function(e){
     e.preventDefault()
+
     teacherPayTotal.innerHTML = ''
 
     // Setting the globally scoped arrays to clear the fields
+    let finalCalculation = []
     let ytdarry = []
     let differenceInDaysArray = []
     // Setting the globally scoped arrays to clear the fields
@@ -63,10 +65,29 @@ button.addEventListener("click", function(e){
     else if(PFNum === 15 && numOfMonthsNum === 11){
         finalCalculation.push(averageTotal * 22)
     }
+    else if(PFNum === 29 && numOfMonthsNum === 9){
+        finalCalculation.push(averageTotal * 9)
+    }
+    else if(PFNum === 29 && numOfMonthsNum === 10){
+        finalCalculation.push(averageTotal * 10)
+    }
+    else if(PFNum === 29 && numOfMonthsNum === 11){
+        finalCalculation.push(averageTotal * 11)
+    }
 
-    const fc = parseFloat(finalCalculation)
-    teacherPayTotal.append(fc.toFixed(2))
+
+    const fc = parseFloat(finalCalculation).toFixed(2)
+    const calcDiv = document.createElement("h4")
+    teacherPayTotal.appendChild(calcDiv)
+    calcDiv.append(fc)
+
+
  
+    ytd.value = ""
+    payFrequency.value  = "Pay Frequency"
+    lastDate.value = ""
+    numOfMonths.value = "Number of months customer gets paid"
+    
     
     
 })
